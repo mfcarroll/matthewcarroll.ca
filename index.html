@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Matthew Carroll — Software Developer</title>
+    <meta
+      name="description"
+      content="Matthew Carroll is a software developer, technologist and strategist in Nelson, BC, Canada."
+    />
+    <link rel="canonical" href="https://matthewcarroll.ca/" />
+    <meta property="og:title" content="Matthew Carroll" />
+    <meta
+      property="og:description"
+      content="Software developer technologist and strategist in Nelson, BC, Canada."
+    />
+    <meta property="og:url" content="https://matthewcarroll.ca/" />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: light)"
+      content="#fbfbf9"
+    />
+    <meta
+      name="theme-color"
+      media="(prefers-color-scheme: dark)"
+      content="#15181b"
+    />
+    <script>
+      // Apply a stored theme override before first paint to avoid a flash.
+      (function () {
+        var t = localStorage.getItem("theme");
+        if (t === "light" || t === "dark")
+          document.documentElement.dataset.theme = t;
+      })();
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <button class="theme-toggle" type="button" aria-label="Theme: system">
+      <svg
+        class="icon-system"
+        viewBox="0 0 24 24"
+        width="18"
+        height="18"
+        aria-hidden="true"
+      >
+        <circle
+          cx="12"
+          cy="12"
+          r="9"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+        />
+        <path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor" />
+      </svg>
+      <svg
+        class="icon-light"
+        viewBox="0 0 24 24"
+        width="18"
+        height="18"
+        aria-hidden="true"
+      >
+        <circle cx="12" cy="12" r="4.5" fill="currentColor" />
+        <g stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path
+            d="M12 2.5v2.5M12 19v2.5M2.5 12H5M19 12h2.5M5.3 5.3l1.8 1.8M16.9 16.9l1.8 1.8M18.7 5.3l-1.8 1.8M7.1 16.9l-1.8 1.8"
+          />
+        </g>
+      </svg>
+      <svg
+        class="icon-dark"
+        viewBox="0 0 24 24"
+        width="18"
+        height="18"
+        aria-hidden="true"
+      >
+        <path
+          d="M20.5 14.5A8.5 8.5 0 0 1 9.5 3.5a8.5 8.5 0 1 0 11 11z"
+          fill="currentColor"
+        />
+      </svg>
+    </button>
+
+    <main>
+      <header>
+        <h1>Matthew Carroll</h1>
+        <p class="tagline">
+          Software developer, technologist &amp; strategist · Nelson, BC, Canada
+          · Traditional territories of the
+          <a href="https://sinixt.org/" target="_blank">Sinixt</a>.
+        </p>
+      </header>
+
+      <section aria-label="About">
+        <p>
+          I build digital tools and manage technology and security at
+          <a href="https://stand.earth" target="_blank">Stand.earth</a>, an
+          environmental advocacy organization working across Canada and the US.
+        </p>
+        <p>
+          Before that: twenty-odd years in the nonprofit, public, and private
+          sectors as a scientist, campaigner, and developer — co-founding
+          <a href="https://leadnow.ca" target="_blank">Leadnow.ca</a>, directing
+          campaigns at
+          <a href="https://openmedia.ca" target="_blank">openmedia.ca</a>
+          building training software for the Canadian Forces, and more. I
+          started out in atmospheric chemistry, and still approach software and
+          strategy with a scientific mindset.
+        </p>
+      </section>
+
+      <section aria-labelledby="work-heading">
+        <h2 id="work-heading">Selected public projects</h2>
+        <ul class="work">
+          <li>
+            <a
+              href="https://github.com/mfcarroll/extract-otp-web"
+              target="_blank"
+              >extract-otp-web</a
+            >
+            <p>
+              A client-side tool for
+              <a
+                href="https://mfcarroll.github.io/extract-otp-web/"
+                target="_blank"
+                >extracting one-time-password secrets</a
+              >
+              from Google Authenticator exports. Runs entirely in your browser —
+              nothing leaves your machine.
+            </p>
+          </li>
+          <li>
+            <a href="https://github.com/Standearth/vcard-qr" target="_blank"
+              >vcard-qr</a
+            >
+            <p>
+              A QR-code based
+              <a href="https://qr.stand.earth/" target="_blank"
+                >contact-card generator</a
+              >
+              and related tools built for Stand.earth staff, with Apple Wallet
+              and Google Wallet integrations for digital business cards —
+              including Apple Passkit certificate-signing backend on Cloud Run.
+            </p>
+          </li>
+          <li>
+            <a href="https://github.com/Standearth/bc-mla-tools" target="_blank"
+              >bc-mla-tools</a
+            >
+            <p>
+              Tools for working with
+              <a
+                href="https://standearth.github.io/bc-mla-tools/"
+                target="_blank"
+                >BC Legislature and MLA data</a
+              >: a scraper that publishes fresh MLA contact data nightly, with
+              an API, Python module, and
+              <a
+                href="https://standearth.github.io/bc-mla-tools/lookup.html"
+                target="_blank"
+                >lightweight embeddable widget</a
+              >
+              that looks up a voter's electoral district from their address.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact</h2>
+        <p>
+          I occasionally take on select freelance and consulting projects. I've
+          worked with a wide range of clients including individuals, businesses,
+          nonprofits, and unions. Everything from full-stack custom software, to
+          data analysis and pipelines, GIS, infrastructure, and more. If you
+          have something that could use an experienced pair of hands, reach out
+          and let's chat.
+        </p>
+        <ul class="contact">
+          <li>
+            <a href="mailto:m@tthew.cx">
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="2.5" y="5" width="19" height="14" rx="2" />
+                <path d="m3.5 6.5 8.5 7 8.5-7" />
+              </svg>
+              <span>Email</span>
+              <span class="handle">m@tthew.cx</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://signal.me/#eu/y4Be9GjrAKG7JLKjGydiETbgCJ66M61_4Q3n5W6xiPnIg-xng4dDgKh2PlTUxSi6"
+              target="_blank"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                aria-hidden="true"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              >
+                <path
+                  d="M12 3a9 9 0 1 1-4.3 16.9L3 21l1.1-4.7A9 9 0 0 1 12 3z"
+                  stroke-dasharray="2.6 2.2"
+                />
+              </svg>
+              <span>Signal</span>
+              <span class="handle">@matthewc.01</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://wa.me/matthewc.01" target="_blank">
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                aria-hidden="true"
+                fill="currentColor"
+              >
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347M12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"
+                />
+              </svg>
+              <span>WhatsApp</span>
+              <span class="handle">matthewc.01</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/mfcarroll" target="_blank">
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                aria-hidden="true"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.34.95.1-.74.4-1.25.72-1.53-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11.03 11.03 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12 0 1.53-.01 2.76-.01 3.14 0 .3.2.67.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"
+                />
+              </svg>
+              <span>GitHub</span>
+              <span class="handle">mfcarroll</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/matthewfcarroll/"
+              target="_blank"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                aria-hidden="true"
+                fill="currentColor"
+              >
+                <path
+                  d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.13 2.07 2.07 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45z"
+                />
+              </svg>
+              <span>LinkedIn</span>
+              <span class="handle">matthewfcarroll</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://x.com/matthewfcarroll" target="_blank">
+              <svg
+                viewBox="0 0 24 24"
+                width="18"
+                height="18"
+                aria-hidden="true"
+                fill="currentColor"
+              >
+                <path
+                  d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.21-6.82-5.97 6.82H1.67l7.73-8.84L1.25 2.25h6.83l4.71 6.23 5.45-6.23zm-1.16 17.52h1.83L7.08 4.13H5.12l11.96 15.64z"
+                />
+              </svg>
+              <span>X</span>
+              <span class="handle">@matthewfcarroll</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2026 Matthew Carroll</p>
+    </footer>
+
+    <script src="theme.js"></script>
+  </body>
+</html>

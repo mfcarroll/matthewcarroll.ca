@@ -1,0 +1,229 @@
+/* Theme ------------------------------------------------------------------ */
+
+:root {
+  color-scheme: light dark;
+
+  --bg: light-dark(#fbfbf9, #15181b);
+  --text: light-dark(#22261f, #d5dbd4);
+  --muted: light-dark(#6e7568, #8b948a);
+  --accent: light-dark(#2e6e54, #82c3a5);
+  --rule: light-dark(#e6e7e1, #2a2f33);
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+/* Base ------------------------------------------------------------------- */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  body,
+  a,
+  .theme-toggle {
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease,
+      border-color 0.2s ease,
+      text-decoration-color 0.2s ease;
+  }
+}
+
+main {
+  max-width: 39rem;
+  margin-inline: auto;
+  padding: clamp(3rem, 10vh, 6rem) 1.5rem 3rem;
+}
+
+section + section {
+  margin-top: 3rem;
+}
+
+p + p {
+  margin-top: 1em;
+}
+
+/* Type ------------------------------------------------------------------- */
+
+h1 {
+  font-size: 1.75rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.tagline {
+  margin-top: 0.375rem;
+  color: var(--muted);
+}
+
+header {
+  margin-bottom: 3rem;
+}
+
+h2 {
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--accent) 35%, transparent);
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  text-decoration-color: currentColor;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Selected work ---------------------------------------------------------- */
+
+.work {
+  list-style: none;
+  padding: 0;
+}
+
+.work li + li {
+  margin-top: 1.25rem;
+}
+
+.work li > a {
+  font-weight: 550;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.95em;
+}
+
+.work p {
+  margin-top: 0.25rem;
+}
+
+/* Contact ---------------------------------------------------------------- */
+
+.contact {
+  list-style: none;
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+.contact li + li {
+  margin-top: 0.375rem;
+}
+
+.contact a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.4rem 0.5rem;
+  margin-inline: -0.5rem;
+  border-radius: 6px;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.contact a:hover {
+  background: color-mix(in srgb, var(--accent) 9%, transparent);
+}
+
+.contact svg {
+  flex-shrink: 0;
+  color: var(--accent);
+}
+
+.contact .handle {
+  margin-left: auto;
+  color: var(--muted);
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.85em;
+}
+
+@media (max-width: 26rem) {
+  .contact a {
+    flex-wrap: wrap;
+    row-gap: 0;
+  }
+
+  .contact .handle {
+    margin-left: 0;
+    flex-basis: 100%;
+    padding-left: calc(18px + 0.75rem);
+  }
+}
+
+/* Theme toggle ------------------------------------------------------------ */
+
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0;
+  border: 1px solid var(--rule);
+  border-radius: 50%;
+  background: var(--bg);
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.theme-toggle svg {
+  display: none;
+}
+
+:root:not([data-theme]) .icon-system,
+:root[data-theme="light"] .icon-light,
+:root[data-theme="dark"] .icon-dark {
+  display: block;
+}
+
+/* Footer ------------------------------------------------------------------ */
+
+footer {
+  max-width: 39rem;
+  margin-inline: auto;
+  padding: 1.5rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.875rem;
+}
