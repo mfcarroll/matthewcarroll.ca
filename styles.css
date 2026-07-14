@@ -227,3 +227,14 @@ footer {
   color: var(--muted);
   font-size: 0.875rem;
 }
+
+/* Error Page -------------------------------------------------------------- */
+
+.error-page h1 {
+  font-size: 2em;
+  font-weight: normal;
+}
+.error-page span {
+  font-family: "Times New Roman", Times, Georgia, serif;
+  letter-spacing: 0.05em;
+}
